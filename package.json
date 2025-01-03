@@ -2,8 +2,9 @@
   "private": true,
   "scripts": {
     "dev": "nitro dev",
-    "build": "nitro build && prisma generate",
+    "build": "prisma generate && nitro build",
     "prepare": "nitro prepare",
+    "postinstall": "prisma generate",
     "preview": "node .output/server/index.mjs",
     "prisma:generate": "prisma generate",
     "tsc": "tsc --noEmit --skipLibCheck -w"
