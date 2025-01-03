@@ -16,6 +16,7 @@ const context = async (ctx: YogaInitialContext) => {
 
   //check if the request  domain is allowed
   const origin = headers.get("origin");
+  console.log({ headers, origin });
   if (!allowedDomains.includes(origin)) throw new GraphQLError("Origin not allowed");
 
   //check if the request has  https header
